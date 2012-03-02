@@ -1,0 +1,7 @@
+<% @messages.each do |message| %>
+	<article>
+		<p class="id"><span>Message id:</span> <%= message.id %></p>
+		<p class="message"><span>Message content:</span> <%= message.raw_input %></p>
+		<p class="date"><span>Message create date:</span> <%= message.created_at %></p>
+	</article>
+<% end %>

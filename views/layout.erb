@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf8">
+	<title><%= @title + ' | Reader' %></title>
+	<link href="/reset.css" rel="stylesheet">
+	<link href="/style.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>HL7 DB Reader</h1>
+	</header>
+	
+	<div id="main">
+		<%= yield %>
+	</div>
+	
+	<footer>
+		<p><small>An app to simply read out the HL7 messages stored to a db by the HL7 Repeater App</small></p>
+	</footer>
+</body>
+</html>

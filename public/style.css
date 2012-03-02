@@ -1,0 +1,40 @@
+body {  
+		margin: 35px auto;  
+		width: 640px;  
+}  
+	
+header {  
+		text-align: center;  
+		margin: 0 0 20px;  
+}  
+	
+header h1 {  
+		display: inline;  
+		font-size: 32px;  
+}
+	
+#main {  
+		margin: 0 0 20px;  
+}  
+	
+article {  
+		border: 1px solid #eee;  
+		border-top: none;  
+		padding: 15px 10px;  
+}  
+	
+article:first-of-type {  
+		border: 1px solid #eee;  
+}  
+	
+article:nth-child(even) {  
+		background: #fafafa;  
+}  
+	
+p {  
+		margin: 0 0 5px;  
+}  
+	
+p span {
+	color: red;
+}
