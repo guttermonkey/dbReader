@@ -1,0 +1,8 @@
+- if @inbound != nil
+  ~@messages.each do |message|
+    %article
+      %p{:id => "id"} Message ID: =message.id
+      %p{:id => "message"} Content: =message.raw_input
+      %p{:id => "date"} Create Date: =message.created_at
+- else
+  %p No messages exist in the database currently.

@@ -1,6 +1,8 @@
 require 'rubygems'
 require 'sinatra'
 require 'data_mapper'
+require 'dm-mysql-adapter'
+require 'haml'
 
 DataMapper::Logger.new($stdout, :debug)
 DataMapper::setup(:default, 'mysql://hl7repeater:hl7repeater@localhost/hl7repeater')
@@ -14,8 +16,9 @@ end
 
 DataMapper.finalize.auto_upgrade!
 
-get '/' do
-	@messages = Message.all
-	@title = 'All Messages'
-	erb :home
+class Main < Sinatra::Base
+  get '/' do
+	  @messages = Message.all
+	  haml :home
+  end
 end
